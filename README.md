@@ -21,7 +21,7 @@ Each method can accept the following parameters:
 
 **Only the `url` parameter is required. Others parameters (`data`, `headers`, and `responseType`)  are optional, and can be omitted if not needed.**
 
-A generic **GET** or **DELETE** http request made with Nova is composed as follows.
+A generic **GET** or **DELETE** http request made with Nova is composed as follows:
 
 ```javascript
 nova.get(url, { 'Authorization': 'Bearer your-token' }, 'json')
@@ -29,10 +29,18 @@ nova.get(url, { 'Authorization': 'Bearer your-token' }, 'json')
     .catch(error => console.error(error));
 ```
 
-while for **POST** and **PUT** requests, there is also the date parameter that you can use
+while for **POST** and **PUT** requests, there is also the `data` parameter that you can use:
 
 ```javascript
 nova.post(url, { title: 'foo', body: 'bar' }, { 'Authorization': 'Bearer your-token' }, 'json')
+    .then(response => console.log(response))
+    .catch(error => console.error(error));
+```
+
+as told before, only the first parameter is mandatory, so in case no other parameters are needed, the request could be written super succinctly, as below:
+
+```javascript
+nova.get(url)
     .then(response => console.log(response))
     .catch(error => console.error(error));
 ```
