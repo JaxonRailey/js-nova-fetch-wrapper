@@ -21,19 +21,7 @@ Each method can accept the following parameters:
 
 **Only the `url` parameter is required. Others parameters (`data`, `headers`, and `responseType`)  are optional, and can be omitted if not needed.**
 
-A generic http request made with nova is composed as follows.
-
-```javascript
-nova.post(url, data, header, responseType)
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
-```
-
-Below is a complete example for each method:
-
-#### GET
-
-To make a GET request, you can use the `nova.get()` method. Here's an example:
+A generic **GET** or **DELETE** http request made with Nova is composed as follows.
 
 ```javascript
 nova.get(url, { 'Authorization': 'Bearer your-token' }, 'json')
@@ -41,42 +29,12 @@ nova.get(url, { 'Authorization': 'Bearer your-token' }, 'json')
     .catch(error => console.error(error));
 ```
 
-In this example, the `nova.get()` method is used to make a GET request to the specified `url`, with an `Authorization` header containing the `your-token` token. The response is expected to be in JSON format. The `then()` method is used to handle the response, and the `catch()` method is used to handle any errors that occur.
-
-#### POST
-
-To make a POST request, you can use the `nova.post()` method. Here's an example:
+while for **POST** and **PUT** requests, there is also the date parameter that you can use
 
 ```javascript
 nova.post(url, { title: 'foo', body: 'bar' }, { 'Authorization': 'Bearer your-token' }, 'json')
     .then(response => console.log(response))
     .catch(error => console.error(error));
 ```
-
-In this example, the `nova.post()` method is used to make a POST request to the specified `url`, with a JSON payload containing the `title` and `body` properties. An `Authorization` header containing the `your-token` token is also included. The response is expected to be in JSON format. The `then()` method is used to handle the response, and the `catch()` method is used to handle any errors that occur.
-
-#### PUT
-
-To make a PUT request, you can use the `nova.put()` method. Here's an example:
-
-```javascript
-nova.put(url, { title: 'foo', body: 'bar' }, { 'Authorization': 'Bearer your-token' }, 'json')
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
-```
-
-In this example, the `nova.put()` method is used to make a PUT request to the specified `url`, with a JSON payload containing the `title` and `body` properties. An `Authorization` header containing the `your-token` token is also included. The response is expected to be in JSON format. The `then()` method is used to handle the response, and the `catch()` method is used to handle any errors that occur.
-
-#### DELETE
-
-To make a DELETE request, you can use the `nova.delete()` method. Here's an example:
-
-```javascript
-nova.delete(url, { 'Authorization': 'Bearer your-token' }, 'json')
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
-```
-
-In this example, the `nova.delete()` method is used to make a DELETE request to the specified `url`, with an `Authorization` header containing the `your-token` token. The response is expected to be in JSON format. The `then()` method is used to handle the response, and the `catch()` method is used to handle any errors that occur.
 
 :star: **If you liked what I did, if it was useful to you or if it served as a starting point for something more magical let me know with a star** :green_heart:
