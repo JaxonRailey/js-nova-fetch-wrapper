@@ -4,7 +4,7 @@
 
 ## Installation
 
-To use the Nova library in your project, you can install it using npm:
+To use the Nova library in your project, just include it through the script tag in your html:
 
 ```html
 <script src="nova.js"></script>
