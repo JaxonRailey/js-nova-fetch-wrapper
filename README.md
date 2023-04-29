@@ -16,7 +16,7 @@ Each method can accept the following parameters:
 
 - `url` (required): URL to which the HTTP request will be sent.
 - `data` (optional): only used for **POST** and **PUT** requests, is an object with data to sent.
-- `headers` (optional): an object containing any headers to be sent with the HTTP request
+- `headers` (optional): an object containing any headers to be sent with the HTTP request.
 - `responseType` (optional): format of the response to be returned.
 
 **Only the `url` parameter is required. Others parameters (`data`, `headers`, and `responseType`)  are optional, and can be omitted if not needed.**
