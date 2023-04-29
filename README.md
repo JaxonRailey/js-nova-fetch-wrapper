@@ -24,7 +24,7 @@ Each method can accept the following parameters:
 A generic http request made with nova is composed as follows.
 
 ```javascript
-nova.get(url, data, header, responseType)
+nova.post(url, data, header, responseType)
     .then(response => console.log(response))
     .catch(error => console.error(error));
 ```
