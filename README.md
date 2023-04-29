@@ -14,12 +14,13 @@ To use the Nova library in your project, you can install it using npm:
 
 Each method can accept the following parameters:
 
-- `url` (required): The URL to which the HTTP request will be sent.
-- `data` (optional): The data to be sent with the HTTP request, typically in the form of an object. This parameter is only used for POST and PUT requests, and is not used for GET and DELETE requests.
-- `headers` (optional): An object containing any headers to be sent with the HTTP request, such as the `Authorization` header used to authenticate the request. If no headers are needed, this parameter can be omitted.
-- `responseType` (optional): The format of the response to be returned. This parameter is only used for GET requests, and the default value is `json`.
+- `url` (required): URL to which the HTTP request will be sent.
+- `data` (optional): only used for **POST** and **PUT** requests, is an object with data to sent.
+- `headers` (optional): an object containing any headers to be sent with the HTTP request
+- `responseType` (optional): format of the response to be returned.
 
-It's important to note that only the `url` parameter is required for all four HTTP methods. The `data`, `headers`, and `responseType` parameters are all optional, and can be omitted if not needed.
+**Only the `url` parameter is required. Others parameters (`data`, `headers`, and `responseType`)  are optional, and can be omitted if not needed.**
+
 
 #### GET
 
